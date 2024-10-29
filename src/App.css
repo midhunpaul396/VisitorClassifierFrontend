@@ -1,38 +1,121 @@
+/* App.css */
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #edf2f7; /* Light grey background */
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
 .App {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Softer shadow for elevated look */
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 1.8rem;
+  color: #2d3748; /* Darker grey for titles */
+  margin-bottom: 1.5rem;
+  font-weight: 700;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+label {
+  font-size: 1rem;
+  color: #4a5568; /* Medium grey for form labels */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="text"] {
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #cbd5e0; /* Light border color */
+  border-radius: 6px;
+  width: 100%;
+  max-width: 400px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #3182ce; /* Blue border on focus */
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2); /* Soft blue glow */
+}
+
+button {
+  background-color: #3182ce; /* Blue button */
+  color: #ffffff;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #2b6cb0; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+button:active {
+  transform: translateY(0); /* Return to normal on click */
+}
+
+.loading {
+  font-size: 1rem;
+  color: #718096; /* Darker grey for loading text */
+  margin: 1rem 0;
+}
+
+.questions {
+  text-align: left;
+}
+
+.questions h2 {
+  font-size: 1.5rem;
+  color: #2d3748; /* Darker grey for question titles */
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.questions p {
+  font-size: 1rem;
+  color: #4a5568; /* Medium grey for question text */
+}
+
+.questions label {
+  font-size: 1rem;
+  color: #4a5568;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.questions input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+.category {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #38a169; /* Green for success category */
+  font-weight: 600;
 }
