@@ -20,7 +20,7 @@ function App() {
       setQuestions(questionsData);
     } catch (error) {
       console.error("Error fetching questions:", error);
-      alert("Failed to retrieve questions. Please try again.");
+      alert("Failed to retrieve questions. Enter a website without captcha verification");
     } finally {
       setLoading(false);
     }
@@ -94,16 +94,19 @@ function App() {
                 ))}
               </div>
             ))}
-            <button onClick={handleCategorizeSubmit} className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition-colors duration-200">
-              Submit Answers
+            <button 
+              onClick={handleCategorizeSubmit} 
+              className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition-colors duration-200"
+            >
+              Categorize
             </button>
           </div>
         )}
 
         {category && (
-          <div className="mt-6">
-            <h2 className="text-xl font-semibold text-gray-800">Your Category</h2>
-            <p className="text-green-500">{category}</p>
+          <div className="mt-4">
+            <h2 className="text-xl font-semibold text-gray-800 mb-2">Category</h2>
+            <p className="text-gray-700">{category}</p>
           </div>
         )}
       </div>
